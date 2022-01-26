@@ -1,0 +1,16 @@
+forge-1.12.2-14.23.5.2847-installer.jar
+
+BauerCam-Mod-1.12.2.jar
+CubicChunks-1.12.2-0.0.1184.0-SNAPSHOT-all.jar
+CubicWorldGen-1.12.2-0.0.140.0-SNAPSHOT-all.jar
+foamfix-0.10.11-1.12.2.jar
+malisiscore-1.12.2-6.5.1.jar
+OptiFine_1.12.2_HD_U_G5.jar
+performant-1.12.2-1.10.jar
+VanillaFix-1.0.10-150.jar
+xplosives-1.1.jar
+Minema-3.5.4-1.12.2.jar (S:videoEncoderParams=-rtbufsize 1024M -thread_queue_size 1024 -f rawvideo -pix_fmt bgr24 -s %WIDTH%x%HEIGHT% -r 60 -i - -vf vflip -c:v h264_nvenc -profile:v high -pix_fmt yuv420p -b:v 10M -bf:v 3 -preset fast -rc:v vbr_hq -rc-lookahead 32 /home/pacman/record/output_%NAME%.mp4)
+ComplementaryShaders_3.11.zip
+
+
+
