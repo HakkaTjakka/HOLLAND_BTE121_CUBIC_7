@@ -1,0 +1,38 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sdb3 during installation
+UUID=87362e9e-d14c-4364-8c78-caf0f8ee1768 /               ext3    errors=remount-ro 0       1
+# /TERRA2 was on /dev/sdc1 during installation
+UUID=3918-3C63  /TERRA2         vfat    utf8,umask=007,gid=46 0       1
+# /boot/efi was on /dev/sda1 during installation
+UUID=94AC-C227  /boot/efi       vfat    umask=0077      0       1
+# /windows was on /dev/sdb4 during installation
+UUID=3913-5BF7  /windows        vfat    utf8,umask=007,gid=46 0       1
+# swap was on /dev/sdb2 during installation
+/dev/sdc1 /mnt/sdc1 auto nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=holland 0 0
+
+#/dev/disk/by-uuid/789bf84e-f98a-4484-9243-4765d9d765a8 /mnt/extra auto nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=extra 0 0
+
+
+#/dev/disk/by-uuid/29c68ad0-6b75-4faf-88df-90ca6ef6c358 /media/pacman/extra auto nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=extra 0 0
+
+#/dev/sdb4 /mnt/sdb4 auto nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=ssd 0 0
+#/dev/sda6 /mnt/sda6 auto nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=DATA 0 0
+#/dev/sda3 /mnt/sda3 auto nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=Acer 0 0
+
+/dev/disk/by-uuid/343896083895C8EE /media/pacman/DATA auto nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=DATA 0 0
+/dev/disk/by-uuid/37620A9A581B65F3 /media/pacman/Acer auto nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=Acer 0 0
+
+# mhddfs -o allow_other /media/pacman/extra,/mnt/sdc1,/media/pacman/Acer/extra,/media/pacman/DATA/extra /opt/holland/
+# mhddfs#/mnt/sdc1,/media/pacman/Acer/extra,/media/pacman/DATA/extra /Storage fuse allow_other,nofail,defaults,nonempty 0 0
+
+/dev/disk/by-id/usb-Seagate_OneTouch_HDD_00000000NABR2NQ8-0:0-part1 /mnt/usb-Seagate_OneTouch_HDD_00000000NABR2NQ8-0:0-part1 auto nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=OneTouch 0 0
+
+/mnt/sdc1:/media/pacman/Acer/extra:/media/pacman/DATA/extra /Storage fuse.mergerfs allow_other,direct_io,use_ino,category.create=lfs,moveonenospc=true,minfreespace=5G,fsname=mergerfsPool 0 0
+
+/dev/disk/by-id/usb-Seagate_BUP_SL_NA9W0ZBL-0:0-part2 /mnt/external auto nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=PM 0 0
