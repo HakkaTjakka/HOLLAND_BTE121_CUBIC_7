@@ -1,0 +1,91 @@
+df -h
+apt search nvidia-driver
+sudo apt install -y nvidia-driver-460
+ubuntu-drivers devices
+hwinfo --gfxcard --short
+sudo dpkg --configure -a
+sudo lshw -C display
+sudo apt autoremove
+sudo cpupower frequency-set -g performance
+sudo apt install linux-oem-5.6-tools-common
+lsb_release -a
+sudo ubuntu-drivers autoinstall
+sudo apt purge nvidia-*
+sudo apt autoremove
+sudo apt-get autoclean
+sudo apt-get clean
+1
+lspci -v
+cat /var/log/Xorg.0.log
+nvidia-smi -a
+sudo apt install bumblebee
+sudo apt-get install linux-headers-generic
+sudo apt-get install --reinstall nvidia-current
+sudo apt-get install --reinstall nvidia-current
+sudo apt-get install linux-headers-generic
+dpkg --get-selections
+apt --fix-broken install
+sudo aptitude install nvidia-driver-460
+sudo service bumblebeed restart
+nvidia-smi
+sudo bash -c echo blacklist nouveau > /etc/modprobe.d/blacklist-nvidia-nouveau.conf
+sudo bash -c echo options nouveau modeset=0 >> /etc/modprobe.d/blacklist-nvidia-nouveau.conf
+cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf
+sudo update-initramfs -u
+sudo reboot
+crontab -e
+ln -s realfolder linkfolder
+sudo wireshark
+sudo ettercap -q -T -M arp
+sudo nano /etc/default/grub
+sudo update-grub
+sudo apt-get install phoronix-test-suite
+phoronix-test-suite default-benchmark openarena xonotic tesseract gputest unigine-valley
+sudo update-alternatives --config java
+sudo apt-get install openjdk-8-jre
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin
+sudo cpupower frequency-set -g performance
+sudo cpupower frequency-set -g ondemand
+lspci
+sudo add-apt-repository ppa:lutris-team/lutris
+sudo dpkg --add-architecture i386
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
+sudo apt-key add winehq.key
+sudo add-apt-repository deb https://dl.winehq.org/wine-builds/ubuntu/ focal main
+sudo apt install --install-recommends winehq-stable
+sudo sh NVIDIA-Linux-x86_64-470.xx.xx.run --dkms
+sudo sh ./NVIDIA-Linux-x86_64-495.46.run --dkms
+sudo apt-get remove --purge ^nvidia-.* sudo apt-get remove --purge ^libnvidia-.* sudo apt-get remove --purge ^cuda-.*
+sudo dpkg -P nvidia-driver-470
+sudo bash NVIDIA-Linux-x86_64-XXX.XX.run --uninstall
+printf RESUME=UUID=b2c07267-018d-40e0-861d-2a81b499a5ca\n
+sudo update-initramfs -u -k all
+sudo apt install nvidia-cuda-toolkit
+dpkg-query -W --showformat='${Package} ${Status}\n' | grep -v deinstall | awk '{ print $1 }' | grep -E 'nvidia.*-[0-9]+$' | xargs -r -L 1 sudo apt-mark hold
+sudo apt install --fix-broken
+sudo dpkg --configure -a
+sudo apt install --fix-broken
+
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+wget https://developer.download.nvidia.com/compute/cuda/11.6.0/local_installers/cuda-repo-ubuntu2004-11-6-local_11.6.0-510.39.01-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu2004-11-6-local_11.6.0-510.39.01-1_amd64.deb
+sudo apt-key add /var/cuda-repo-ubuntu2004-11-6-local/7fa2af80.pub
+sudo apt-get update
+sudo apt-get -y install cuda
+lsb_release -a
+sudo apt install steam
+sudo gdebi phoronix-test-suite_10.8.0_all.deb
+sudo apt install gdebi-core
+optirun options application application-parameters
+phoronix-test-suite run unigine-heaven
+phoronix-test-suite install unigine-heaven
+ncdu
+sudo umount -l /opt/holland
+ssh-add /home/pacman/.ssh/id_rsa
+sudo update-alternatives --config python
+sudo ntfsfix /dev/sda6
+sudo gparted
+sudo mount -o remount,uid=1000,gid=46,rw /dev/sda3
+sudo mount -o remount,rw /PartitionID /MountPoint
