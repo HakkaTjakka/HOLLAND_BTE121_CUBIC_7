@@ -1,0 +1,8 @@
+sudo smbpasswd -a <username>
+sudo apt install samba smbclient
+sudo systemctl status smbd
+sudo ufw allow Samba
+smb://THERABBITHOLE/shared_1g_1
+
+/run/user/1000/gvfs/smb-share:server=pacman-pc,share=repo
+
